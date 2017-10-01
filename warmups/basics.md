@@ -1,94 +1,108 @@
+## 1. not-string
+
+Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
 
 
-## What will this output and why?
-
-```javascript
-(function(){
-  var a = b = 3;
-})();
-
-console.log("a defined? " + (typeof a !== 'undefined'));
-console.log("b defined? " + (typeof b !== 'undefined'));
+```
+notString('candy') → 'not candy'
+notString('x') → 'not x'
+notString('not bad') → 'not bad'
 ```
 
-## What will this output and why?
+## 2. Missing-char
 
-```javascript
-var myObject = {
-    foo: "bar",
-    func: function() {
-        var self = this;
-        console.log("outer func:  this.foo = " + this.foo);
-        console.log("outer func:  self.foo = " + self.foo);
-        (function() {
-            console.log("inner func:  this.foo = " + this.foo);
-            console.log("inner func:  self.foo = " + self.foo);
-        }());
-    }
-};
-myObject.func();
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+
+```
+missingChar('kitten', 1) → 'ktten'
+missingChar('kitten', 0) → 'itten'
+missingChar('kitten', 4) → 'kittn'
 ```
 
+## 3. front3
 
-## Will these return the same thing?
 
-```javascript
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
-}
+Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
 
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
-}
+
+```
+front3('Java') → 'JavJavJav'
+front3('Chocolate') → 'ChoChoCho'
+front3('abc') → 'abcabcabc'
 ```
 
-## What order will you see the numbers printed?
+## 4. strinTimes
 
-```javascript
-(function() {
-    console.log(1); 
-    setTimeout(function(){console.log(2)}, 1000); 
-    setTimeout(function(){console.log(3)}, 0); 
-    console.log(4);
-})();
+
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+
+```
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
 ```
 
-## Whod that works on the following:
+## 5. stringBits
 
-```javascript
-console.log(sum(2,3));   // Outputs 5
-console.log(sum(2)(3));  // Outputs 5
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+```
+string_bits('Hello') → 'Hlo'
+string_bits('Hi') → 'H'
+string_bits('Heeololeo') → 'Hello'
 ```
 
-## What is the output of the following? How would you fix it?
+## 6. stringSplosion
 
-```javascript
-for (var i = 0; i < 5; i++) {
-  setTimeout(function() { console.log(i); }, i * 1000 );
-}
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+```
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
 ```
 
-## What does this output and why:
+## 7. last2
 
-```javascript
-var hero = {
-    _name: 'John Doe',
-    getSecretIdentity: function (){
-        return this._name;
-    }
-};
+Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
 
-var stoleSecretIdentity = hero.getSecretIdentity;
 
-console.log(stoleSecretIdentity());
-console.log(hero.getSecretIdentity());
+```
+last2('hixxhi') → 1
+last2('xaxxaxaxx') → 1
+last2('axxxaaxx') → 2
 ```
 
+## 8. arrayCount99
+
+Given an array of ints, return the number of 9's in the array.
+
+```
+array_count9([1, 2, 9]) → 1
+array_count9([1, 9, 9]) → 2
+array_count9([1, 9, 9, 3, 9]) → 3
+```
+
+## 9. arrayFront9
+Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+
+```
+array_front9([1, 2, 9, 3, 4]) → True
+array_front9([1, 2, 3, 4, 9]) → False
+array_front9([1, 2, 3, 4, 5]) → False
+```
+
+## 10. array123
+
+
+Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+
+```
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 1, 2, 4, 1]) → False
+array123([1, 1, 2, 1, 2, 3]) → True
+```
 
