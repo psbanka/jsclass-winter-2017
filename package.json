@@ -1,0 +1,26 @@
+{
+  "name": "jsclass-spr-2017",
+  "version": "1.0.0",
+  "description": "1. Thinking in React exercise 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psbanka/jsclass-winter-2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psbanka/jsclass-winter-2017/issues"
+  },
+  "homepage": "https://github.com/psbanka/jsclass-winter-2017#readme",
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
