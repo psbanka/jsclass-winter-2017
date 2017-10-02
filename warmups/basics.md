@@ -1,6 +1,7 @@
 ## 1. not-string
 
-Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
+Given a string, return a new string where "not " has been added to the front.
+However, if the string already begins with "not", return the string unchanged.
 
 
 ```
@@ -11,7 +12,9 @@ notString('not bad') → 'not bad'
 
 ## 2. Missing-char
 
-Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+Given a non-empty string and an int n, return a new string where the char at
+index n has been removed. The value of n will be a valid index of a char in the
+original string (i.e. n will be in the range 0..len(str)-1 inclusive).
 
 
 ```
@@ -23,7 +26,9 @@ missingChar('kitten', 4) → 'kittn'
 ## 3. front3
 
 
-Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+Given a string, we'll say that the front is the first 3 chars of the string. If
+the string length is less than 3, the front is whatever is there. Return a new
+string which is 3 copies of the front.
 
 
 ```
@@ -35,23 +40,25 @@ front3('abc') → 'abcabcabc'
 ## 4. strinTimes
 
 
-Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+Given a string and a non-negative int n, return a larger string that is n
+copies of the original string.
 
 
 ```
-string_times('Hi', 2) → 'HiHi'
-string_times('Hi', 3) → 'HiHiHi'
-string_times('Hi', 1) → 'Hi'
+stringTimes('Hi', 2) → 'HiHi'
+stringTimes('Hi', 3) → 'HiHiHi'
+stringTimes('Hi', 1) → 'Hi'
 ```
 
 ## 5. stringBits
 
-Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+Given a string, return a new string made of every other char starting with the
+first, so "Hello" yields "Hlo".
 
 ```
-string_bits('Hello') → 'Hlo'
-string_bits('Hi') → 'H'
-string_bits('Heeololeo') → 'Hello'
+stringBits('Hello') → 'Hlo'
+stringBits('Hi') → 'H'
+stringBits('Heeololeo') → 'Hello'
 ```
 
 ## 6. stringSplosion
@@ -60,14 +67,16 @@ Given a non-empty string like "Code" return a string like "CCoCodCode".
 
 
 ```
-string_splosion('Code') → 'CCoCodCode'
-string_splosion('abc') → 'aababc'
-string_splosion('ab') → 'aab'
+stringSplosion('Code') → 'CCoCodCode'
+stringSplosion('abc') → 'aababc'
+stringSplosion('ab') → 'aab'
 ```
 
 ## 7. last2
 
-Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+Given a string, return the count of the number of times that a substring length
+2 appears in the string and also as the last 2 chars of the string, so
+"hixxxhi" yields 1 (we won't count the end substring).
 
 
 ```
@@ -81,18 +90,18 @@ last2('axxxaaxx') → 2
 Given an array of ints, return the number of 9's in the array.
 
 ```
-array_count9([1, 2, 9]) → 1
-array_count9([1, 9, 9]) → 2
-array_count9([1, 9, 9, 3, 9]) → 3
+arrayCount9([1, 2, 9]) → 1
+arrayCount9([1, 9, 9]) → 2
+arrayCount9([1, 9, 9, 3, 9]) → 3
 ```
 
 ## 9. arrayFront9
 Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
 
 ```
-array_front9([1, 2, 9, 3, 4]) → True
-array_front9([1, 2, 3, 4, 9]) → False
-array_front9([1, 2, 3, 4, 5]) → False
+arrayFront9([1, 2, 9, 3, 4]) → True
+arrayFront9([1, 2, 3, 4, 9]) → False
+arrayFront9([1, 2, 3, 4, 5]) → False
 ```
 
 ## 10. array123
