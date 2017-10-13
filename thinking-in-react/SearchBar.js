@@ -5,6 +5,7 @@ export default class SearchBar extends Component {
     return (
       <div>
         <input
+          id='product-filter'
           value={this.props.searchText}
           onChange={this.props.onSearchChange}
           type='test'

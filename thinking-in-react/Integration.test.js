@@ -29,7 +29,6 @@ describe('integration testing', () => {
   it('properly colors items that are out of stock', () => {
     const productRows = app.find('ProductRow')
     productRows.forEach((productRow) => {
-      // productRow.render().find('tr td:first-child')
       const isStocked = productRow.props().record.stocked
       const domElement = productRow.render().find('tr td:first-child')
       const style = domElement[0].attribs.style
@@ -39,5 +38,18 @@ describe('integration testing', () => {
         expect(style).toEqual('color: red;')
       }
     })
+  })
+
+  it('renders the right number of table rows when filtering out-of-stock', () => {
+    app.find('#instock').simulate('change')
+    const productRows = app.find('ProductRow')
+    expect(productRows.length).toBe(4)
+  })
+
+  it('renders the right number of table rows when filtering product names', () => {
+    const event = {target: {value: 'i'}}
+    app.find('#product-filter').simulate('change', event)
+    const productRows = app.find('ProductRow')
+    expect(productRows.length).toBe(2)
   })
 })
