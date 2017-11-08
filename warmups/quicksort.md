@@ -17,20 +17,17 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
 [Visualization of Quicksort](https://en.wikipedia.org/wiki/Quicksort#/media/File:Sorting_quicksort_anim.gif)
 
 ```
-const quicksort = (arr, lo, hi) => {
+const quicksort = (arr) => {
 
 }
 
-const partition = (arr, lo, hi) => {
-
-}
-```
-`quicksort` is where and what you will make recursive calls with, while `partition` is what you will use to do the swapping of positions. This is also using `lo` and `hi` as indexes in the array `arr`.
-
-```
 const unsortedArray1 = [1, 6, 4, 7, 5, 9, 8, 0, 2, 3]
 
 const unsortedArray2 = [1, 6, 4, 7, 5, 9, 8, 0, 2, 3, 1, 6, 4, 7, 5, 9, 8, 0, 2, 3]
 
 const unsortedArray3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+console.log(quicksort(unsortedArray1))
+console.log(quicksort(unsortedArray2))
+console.log(quicksort(unsortedArray3))
 ```
